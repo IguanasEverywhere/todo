@@ -1,0 +1,3 @@
+let defaultProject = [];
+
+export { defaultProject };
