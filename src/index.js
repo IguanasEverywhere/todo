@@ -1,16 +1,9 @@
 import './style.css';
-import { renderInputForm } from './renderInputForm';
+import { renderPageFrame } from './renderPageFrame';
+
+renderPageFrame();
 
 
-
-const addNewItemButton = document.createElement("button");
-addNewItemButton.textContent = "Click Here To Add a New Item";
-const content = document.getElementById("content");
-content.appendChild(addNewItemButton);
-
-addNewItemButton.addEventListener("click", () => {
-    renderInputForm();
-});
 
 
 

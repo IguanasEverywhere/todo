@@ -1,3 +1,0 @@
-let defaultProject = [];
-
-export { defaultProject };

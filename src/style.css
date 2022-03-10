@@ -1,14 +1,48 @@
 body {
-    background-color: yellowgreen;
+    background-color: #f7f7f4;
+    font-family: 'Fredoka', sans-serif;
+    margin: 0;
 }
 
-.entryHolder {
+h1 {
+    margin: 0 10px;
+}
+
+.pageBody {
+  display: flex;  
+  border: 2px solid red;
+  height: 100%;
+}
+
+.leftSide {
+    border: 2px solid green;
+}
+
+.rightSide {
+    border: 2px solid brown;
+}
+
+.menuBar {
+    background-color: yellow;
+    width: 300px;
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.entry {
-    color: blue;
-    border:3px solid black;
-    margin: 10px;
-    width: 200px;
+.addProjectBtn {
+    background-color: #e11717;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.addProjectBtn:hover {
+    background-color: #e117178c;
+    
 }
