@@ -12,7 +12,7 @@ const addProjectToDom = (projectName) => {
     });
 
     let addTaskButton = document.createElement("button");
-    addTaskButton.textContent = "Add Task To This Project";
+    addTaskButton.textContent = "Add Task To " + projectName;
     let rightSide = document.getElementsByClassName("rightSide")[0];
     rightSide.appendChild(addTaskButton);
 }
