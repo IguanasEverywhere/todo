@@ -44,11 +44,11 @@ const renderPageFrame = () => {
     projectList.classList.add("projectList");
     menuBar.appendChild(projectList);
 
-    let addTaskButton = document.createElement("button");
-    addTaskButton.textContent = "Add Task To This Project";
-    rightSide.appendChild(addTaskButton);
+    // let addTaskButton = document.createElement("button");
+    // addTaskButton.textContent = "Add Task To This Project";
+    // rightSide.appendChild(addTaskButton);
 
 }
-
-export { renderPageFrame};
+  
+export { renderPageFrame };
 

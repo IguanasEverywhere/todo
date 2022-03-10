@@ -9,8 +9,12 @@ const addProjectToDom = (projectName) => {
         let currentProjectName = document.getElementsByClassName("currentProjectName")[0];
         currentProjectName.textContent = projectName;
 
-
     });
+
+    let addTaskButton = document.createElement("button");
+    addTaskButton.textContent = "Add Task To This Project";
+    let rightSide = document.getElementsByClassName("rightSide")[0];
+    rightSide.appendChild(addTaskButton);
 }
 
 export {addProjectToDom};
