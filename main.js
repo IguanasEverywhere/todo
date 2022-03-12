@@ -160,6 +160,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/pushTaskToProject.js":
+/*!**********************************!*\
+  !*** ./src/pushTaskToProject.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"pushTaskToProject\": () => (/* binding */ pushTaskToProject)\n/* harmony export */ });\n\nconst pushTaskToProject = (task, currentProject) => {\n   currentProject.taskArray.push(task);\n   console.log(currentProject);\n}\n\n\n\n//# sourceURL=webpack://todo/./src/pushTaskToProject.js?");
+
+/***/ }),
+
 /***/ "./src/renderLeftMenu.js":
 /*!*******************************!*\
   !*** ./src/renderLeftMenu.js ***!
@@ -176,7 +186,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addButtonToProjectDisplay\": () => (/* binding */ addButtonToProjectDisplay),\n/* harmony export */   \"renderProjectDisplay\": () => (/* binding */ renderProjectDisplay)\n/* harmony export */ });\n/* harmony import */ var _makeTask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./makeTask */ \"./src/makeTask.js\");\n\n\nconst renderProjectDisplay = (projectName) => {\n    const content = document.getElementById(\"content\");\n\n    const projectDisplay = document.createElement(\"div\");\n    projectDisplay.setAttribute(\"id\", \"projectDisplay\");\n\n    content.appendChild(projectDisplay);\n\n}\n\nconst addButtonToProjectDisplay = (currentProject) => {\n    const projectDisplay = document.getElementById(\"projectDisplay\");\n    const addTaskBtn = document.createElement(\"button\");\n    addTaskBtn.textContent = \"Add Task For \" + currentProject.projectName;\n    projectDisplay.appendChild(addTaskBtn);\n\n    // will complete with prompts for now, will make menu later\n    addTaskBtn.addEventListener(\"click\", () => {\n        let title = prompt(\"What is the title of your task?\");\n        let description = prompt (\"What is the description of the task?\");\n        let dueDate = prompt (\"When is the due date for this task?\");\n        let priority = prompt (\"What is this task's priority?\");\n\n       (0,_makeTask__WEBPACK_IMPORTED_MODULE_0__.makeTask)(title, description, dueDate, priority);\n    });\n}\n\n\n\n\n//# sourceURL=webpack://todo/./src/renderProjectDisplay.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addButtonToProjectDisplay\": () => (/* binding */ addButtonToProjectDisplay),\n/* harmony export */   \"renderProjectDisplay\": () => (/* binding */ renderProjectDisplay)\n/* harmony export */ });\n/* harmony import */ var _makeTask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./makeTask */ \"./src/makeTask.js\");\n/* harmony import */ var _pushTaskToProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pushTaskToProject */ \"./src/pushTaskToProject.js\");\n\n\n\nconst renderProjectDisplay = () => {\n    const content = document.getElementById(\"content\");\n\n    const projectDisplay = document.createElement(\"div\");\n    projectDisplay.setAttribute(\"id\", \"projectDisplay\");\n\n    content.appendChild(projectDisplay);\n\n}\n\nconst addButtonToProjectDisplay = (currentProject) => {\n    const projectDisplay = document.getElementById(\"projectDisplay\");\n    const addTaskBtn = document.createElement(\"button\");\n    addTaskBtn.textContent = \"Add Task For \" + currentProject.projectName;\n    projectDisplay.appendChild(addTaskBtn);\n\n    // will complete with prompts for now, will make menu later\n    addTaskBtn.addEventListener(\"click\", () => {\n        let title = prompt(\"What is the title of your task?\");\n        let description = prompt(\"What is the description of the task?\");\n        let dueDate = prompt(\"When is the due date for this task?\");\n        let priority = prompt(\"What is this task's priority?\");\n\n        (0,_pushTaskToProject__WEBPACK_IMPORTED_MODULE_1__.pushTaskToProject)((0,_makeTask__WEBPACK_IMPORTED_MODULE_0__.makeTask)(title, description, dueDate, priority), currentProject); // pass currentProject too?\n\n    });\n}\n\n\n\n\n//# sourceURL=webpack://todo/./src/renderProjectDisplay.js?");
 
 /***/ }),
 
