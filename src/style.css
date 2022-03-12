@@ -1,48 +1,28 @@
 body {
-    background-color: #f7f7f4;
-    font-family: 'Fredoka', sans-serif;
     margin: 0;
 }
 
-h1 {
-    margin: 0 10px;
+#content {
+    display: flex;
+    height: 100%;
 }
 
-.pageBody {
-  display: flex;  
-  border: 2px solid red;
-  height: 100%;
-}
-
-.leftSide {
-    border: 2px solid green;
-}
-
-.rightSide {
-    border: 2px solid brown;
-}
-
-.menuBar {
+#leftMenu {
     background-color: yellow;
-    width: 300px;
+    width: 25%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.addProjectBtn {
-    background-color: #e11717;
-    width: 150px;
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
+#projectDisplay {
+    background-color: grey;
+    width: 25%;
+    height: 100%;
 }
 
-.addProjectBtn:hover {
-    background-color: #e117178c;
-    
+#taskDisplay {
+    background-color: red;
+    width: 50%;
+    height: 100%;
 }

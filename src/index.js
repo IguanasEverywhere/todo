@@ -1,12 +1,8 @@
 import './style.css';
-import { renderPageFrame } from './renderPageFrame';
+import { renderLeftMenu } from './renderLeftMenu';
+import { renderProjectDisplay } from './renderProjectDisplay';
+import { renderTaskDisplay } from './renderTaskDisplay';
 
-renderPageFrame();
-
-
-
-
-
-
-
-
+renderLeftMenu();
+renderProjectDisplay();
+renderTaskDisplay();

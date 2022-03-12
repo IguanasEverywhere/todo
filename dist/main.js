@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n    background-color: #f7f7f4;\\n    font-family: 'Fredoka', sans-serif;\\n    margin: 0;\\n}\\n\\nh1 {\\n    margin: 0 10px;\\n}\\n\\n.pageBody {\\n  display: flex;  \\n  border: 2px solid red;\\n  height: 100%;\\n}\\n\\n.leftSide {\\n    border: 2px solid green;\\n}\\n\\n.rightSide {\\n    border: 2px solid brown;\\n}\\n\\n.menuBar {\\n    background-color: yellow;\\n    width: 300px;\\n    height: 100%;\\n    display: flex;\\n    flex-direction: column;\\n    align-items: center;\\n}\\n\\n.addProjectBtn {\\n    background-color: #e11717;\\n    width: 150px;\\n    text-align: center;\\n    border-radius: 5px;\\n    padding: 10px;\\n    border: none;\\n    font-size: 1rem;\\n    font-weight: 600;\\n}\\n\\n.addProjectBtn:hover {\\n    background-color: #e117178c;\\n    \\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\n    margin: 0;\\n}\\n\\n#content {\\n    display: flex;\\n    height: 100%;\\n}\\n\\n#leftMenu {\\n    background-color: yellow;\\n    width: 25%;\\n    height: 100%;\\n    display: flex;\\n    flex-direction: column;\\n}\\n\\n#projectDisplay {\\n    background-color: grey;\\n    width: 25%;\\n    height: 100%;\\n}\\n\\n#taskDisplay {\\n    background-color: red;\\n    width: 50%;\\n    height: 100%;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -110,13 +110,13 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/addProjectToDom.js":
-/*!********************************!*\
-  !*** ./src/addProjectToDom.js ***!
-  \********************************/
+/***/ "./src/changeCurrentProject.js":
+/*!*************************************!*\
+  !*** ./src/changeCurrentProject.js ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addProjectToDom\": () => (/* binding */ addProjectToDom)\n/* harmony export */ });\n\nconst addProjectToDom = (projectName) => {\n    let projectList = document.getElementsByClassName(\"projectList\")[0];\n    let projectListItem = document.createElement(\"button\");\n    projectListItem.textContent = projectName;\n    projectList.appendChild(projectListItem);\n\n    projectListItem.addEventListener(\"click\", () => {\n        let currentProjectName = document.getElementsByClassName(\"currentProjectName\")[0];\n        currentProjectName.textContent = projectName;\n\n    });\n\n    let addTaskButton = document.createElement(\"button\");\n    addTaskButton.textContent = \"Add Task To \" + projectName;\n    let rightSide = document.getElementsByClassName(\"rightSide\")[0];\n    rightSide.appendChild(addTaskButton);\n}\n\n\n\n//# sourceURL=webpack://todo/./src/addProjectToDom.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"changeCurrentProject\": () => (/* binding */ changeCurrentProject)\n/* harmony export */ });\n/* harmony import */ var _pushProjectToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pushProjectToArray */ \"./src/pushProjectToArray.js\");\n/* harmony import */ var _renderProjectDisplay__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./renderProjectDisplay */ \"./src/renderProjectDisplay.js\");\n\n\n\nconst changeCurrentProject = (projectName) => {\n    const projectDisplay = document.getElementById(\"projectDisplay\");\n    projectDisplay.textContent = projectName;\n\n    let currentProject = _pushProjectToArray__WEBPACK_IMPORTED_MODULE_0__.projectArray.find(project => project.projectName === projectName);\n\n    console.log(\"Current project is \" + currentProject.projectName); // for debugging in console\n\n    (0,_renderProjectDisplay__WEBPACK_IMPORTED_MODULE_1__.addButtonToProjectDisplay)(currentProject);\n\n    return currentProject;\n}\n\n\n\n//# sourceURL=webpack://todo/./src/changeCurrentProject.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _renderPageFrame__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./renderPageFrame */ \"./src/renderPageFrame.js\");\n\n\n\n(0,_renderPageFrame__WEBPACK_IMPORTED_MODULE_1__.renderPageFrame)();\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://todo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _renderLeftMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./renderLeftMenu */ \"./src/renderLeftMenu.js\");\n/* harmony import */ var _renderProjectDisplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderProjectDisplay */ \"./src/renderProjectDisplay.js\");\n/* harmony import */ var _renderTaskDisplay__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./renderTaskDisplay */ \"./src/renderTaskDisplay.js\");\n\n\n\n\n\n(0,_renderLeftMenu__WEBPACK_IMPORTED_MODULE_1__.renderLeftMenu)();\n(0,_renderProjectDisplay__WEBPACK_IMPORTED_MODULE_2__.renderProjectDisplay)();\n(0,_renderTaskDisplay__WEBPACK_IMPORTED_MODULE_3__.renderTaskDisplay)();\n\n\n//# sourceURL=webpack://todo/./src/index.js?");
 
 /***/ }),
 
@@ -136,17 +136,57 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"makeProject\": () => (/* binding */ makeProject)\n/* harmony export */ });\n/* harmony import */ var _addProjectToDom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addProjectToDom */ \"./src/addProjectToDom.js\");\n\n\nconst makeProject = (projectName) => {\n    let arrayOfTasks = [];\n    (0,_addProjectToDom__WEBPACK_IMPORTED_MODULE_0__.addProjectToDom)(projectName);\n    return { projectName, arrayOfTasks };\n}\n\n\n\n//# sourceURL=webpack://todo/./src/makeProject.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"makeProject\": () => (/* binding */ makeProject)\n/* harmony export */ });\n\nconst makeProject = (projectName) => {\n    let taskArray = [];\n\n    return { taskArray, projectName };\n}\n\n\n\n//# sourceURL=webpack://todo/./src/makeProject.js?");
 
 /***/ }),
 
-/***/ "./src/renderPageFrame.js":
-/*!********************************!*\
-  !*** ./src/renderPageFrame.js ***!
-  \********************************/
+/***/ "./src/makeTask.js":
+/*!*************************!*\
+  !*** ./src/makeTask.js ***!
+  \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderPageFrame\": () => (/* binding */ renderPageFrame)\n/* harmony export */ });\n/* harmony import */ var _makeProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./makeProject */ \"./src/makeProject.js\");\n\n\nconst arrayOfProjects = [];\n\nconst renderPageFrame = () => {\n    const content = document.getElementById(\"content\");\n\n    const pageBody = document.createElement(\"div\");\n    pageBody.classList.add(\"pageBody\");\n    content.appendChild(pageBody);\n\n    const leftSide = document.createElement(\"div\");\n    leftSide.classList.add(\"leftSide\");\n    pageBody.appendChild(leftSide);\n\n    const rightSide = document.createElement(\"div\");\n    rightSide.classList.add(\"rightSide\");\n    pageBody.appendChild(rightSide);\n\n\n    const menuBar = document.createElement(\"div\");\n    menuBar.classList.add(\"menuBar\");\n    leftSide.appendChild(menuBar);\n\n    const currentProjectName = document.createElement(\"h1\");\n    currentProjectName.classList.add(\"currentProjectName\")\n    currentProjectName.textContent = \"All Tasks\";\n    rightSide.appendChild(currentProjectName);\n\n    const addProjectBtn = document.createElement(\"button\");\n    addProjectBtn.classList.add(\"addProjectBtn\");\n    addProjectBtn.textContent = \"Add a Project\";\n    menuBar.appendChild(addProjectBtn);\n\n    addProjectBtn.addEventListener(\"click\", () => {\n        let projectName = prompt(\"Enter New Project Name:\");\n        let selectedProject = (0,_makeProject__WEBPACK_IMPORTED_MODULE_0__.makeProject)(projectName);\n        arrayOfProjects.push(selectedProject);\n        console.log(arrayOfProjects);\n    });\n\n\n    const projectList = document.createElement(\"div\");\n    projectList.classList.add(\"projectList\");\n    menuBar.appendChild(projectList);\n\n    // let addTaskButton = document.createElement(\"button\");\n    // addTaskButton.textContent = \"Add Task To This Project\";\n    // rightSide.appendChild(addTaskButton);\n\n}\n  \n\n\n\n\n//# sourceURL=webpack://todo/./src/renderPageFrame.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"makeTask\": () => (/* binding */ makeTask)\n/* harmony export */ });\nconst makeTask = (title, description, dueDate, priority) => {\n    return { title, description, dueDate, priority };\n}\n\n\n\n//# sourceURL=webpack://todo/./src/makeTask.js?");
+
+/***/ }),
+
+/***/ "./src/pushProjectToArray.js":
+/*!***********************************!*\
+  !*** ./src/pushProjectToArray.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"projectArray\": () => (/* binding */ projectArray),\n/* harmony export */   \"pushToProjectArray\": () => (/* binding */ pushToProjectArray)\n/* harmony export */ });\n\nlet projectArray = [];\n\nconst pushToProjectArray = (newProject) => {\n    projectArray.push(newProject);\n    console.log(projectArray);\n}\n\n\n\n//# sourceURL=webpack://todo/./src/pushProjectToArray.js?");
+
+/***/ }),
+
+/***/ "./src/renderLeftMenu.js":
+/*!*******************************!*\
+  !*** ./src/renderLeftMenu.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderLeftMenu\": () => (/* binding */ renderLeftMenu)\n/* harmony export */ });\n/* harmony import */ var _makeProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./makeProject */ \"./src/makeProject.js\");\n/* harmony import */ var _changeCurrentProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./changeCurrentProject */ \"./src/changeCurrentProject.js\");\n/* harmony import */ var _pushProjectToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pushProjectToArray */ \"./src/pushProjectToArray.js\");\n\n\n\n\nconst renderLeftMenu = () => {\n    const content = document.getElementById(\"content\");\n\n    const leftMenu = document.createElement(\"div\");\n    leftMenu.setAttribute(\"id\", \"leftMenu\");\n\n    leftMenu.textContent = \"Left Menu Placeholder\";\n\n    content.appendChild(leftMenu);\n\n    const addProjectBtn = document.createElement(\"button\");\n    addProjectBtn.textContent = \"Add Project To WorkSpace\";\n    leftMenu.appendChild(addProjectBtn);\n    addProjectBtn.addEventListener(\"click\",() => {\n        let projectName = prompt(\"What is the project named?\");\n        (0,_pushProjectToArray__WEBPACK_IMPORTED_MODULE_2__.pushToProjectArray)((0,_makeProject__WEBPACK_IMPORTED_MODULE_0__.makeProject)(projectName));\n        let projectNameBtn = document.createElement(\"button\");\n        projectNameBtn.textContent = projectName;\n        leftMenu.appendChild(projectNameBtn);\n        projectNameBtn.addEventListener(\"click\", () => {\n            (0,_changeCurrentProject__WEBPACK_IMPORTED_MODULE_1__.changeCurrentProject)(projectName);\n        });\n    });\n}\n\n\n\n\n\n\n//# sourceURL=webpack://todo/./src/renderLeftMenu.js?");
+
+/***/ }),
+
+/***/ "./src/renderProjectDisplay.js":
+/*!*************************************!*\
+  !*** ./src/renderProjectDisplay.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addButtonToProjectDisplay\": () => (/* binding */ addButtonToProjectDisplay),\n/* harmony export */   \"renderProjectDisplay\": () => (/* binding */ renderProjectDisplay)\n/* harmony export */ });\n/* harmony import */ var _makeTask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./makeTask */ \"./src/makeTask.js\");\n\n\nconst renderProjectDisplay = (projectName) => {\n    const content = document.getElementById(\"content\");\n\n    const projectDisplay = document.createElement(\"div\");\n    projectDisplay.setAttribute(\"id\", \"projectDisplay\");\n\n    content.appendChild(projectDisplay);\n\n}\n\nconst addButtonToProjectDisplay = (currentProject) => {\n    const projectDisplay = document.getElementById(\"projectDisplay\");\n    const addTaskBtn = document.createElement(\"button\");\n    addTaskBtn.textContent = \"Add Task For \" + currentProject.projectName;\n    projectDisplay.appendChild(addTaskBtn);\n\n    // will complete with prompts for now, will make menu later\n    addTaskBtn.addEventListener(\"click\", () => {\n        let title = prompt(\"What is the title of your task?\");\n        let description = prompt (\"What is the description of the task?\");\n        let dueDate = prompt (\"When is the due date for this task?\");\n        let priority = prompt (\"What is this task's priority?\");\n\n       (0,_makeTask__WEBPACK_IMPORTED_MODULE_0__.makeTask)(title, description, dueDate, priority);\n    });\n}\n\n\n\n\n//# sourceURL=webpack://todo/./src/renderProjectDisplay.js?");
+
+/***/ }),
+
+/***/ "./src/renderTaskDisplay.js":
+/*!**********************************!*\
+  !*** ./src/renderTaskDisplay.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderTaskDisplay\": () => (/* binding */ renderTaskDisplay)\n/* harmony export */ });\nconst renderTaskDisplay = () => {\n    const content = document.getElementById(\"content\");\n\n    const taskDisplay = document.createElement(\"div\");\n    taskDisplay.setAttribute(\"id\", \"taskDisplay\");\n\n    taskDisplay.textContent = \"Task Display Placeholder\";\n\n    content.appendChild(taskDisplay);\n}\n\n\n\n//# sourceURL=webpack://todo/./src/renderTaskDisplay.js?");
 
 /***/ })
 
