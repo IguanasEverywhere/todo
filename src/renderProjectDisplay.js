@@ -1,6 +1,7 @@
 import { makeTask } from "./makeTask";
+import { pushTaskToProject } from "./pushTaskToProject";
 
-const renderProjectDisplay = (projectName) => {
+const renderProjectDisplay = () => {
     const content = document.getElementById("content");
 
     const projectDisplay = document.createElement("div");
@@ -19,11 +20,12 @@ const addButtonToProjectDisplay = (currentProject) => {
     // will complete with prompts for now, will make menu later
     addTaskBtn.addEventListener("click", () => {
         let title = prompt("What is the title of your task?");
-        let description = prompt ("What is the description of the task?");
-        let dueDate = prompt ("When is the due date for this task?");
-        let priority = prompt ("What is this task's priority?");
+        let description = prompt("What is the description of the task?");
+        let dueDate = prompt("When is the due date for this task?");
+        let priority = prompt("What is this task's priority?");
 
-       makeTask(title, description, dueDate, priority);
+        pushTaskToProject(makeTask(title, description, dueDate, priority), currentProject); // pass currentProject too?
+
     });
 }
 
