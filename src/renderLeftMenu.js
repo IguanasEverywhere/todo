@@ -1,6 +1,7 @@
 import { makeProject } from "./makeProject";
 import { changeCurrentProject } from "./changeCurrentProject";
 import { pushToProjectArray } from "./pushProjectToArray";
+import checkMark from "./greenCheck.png";
 
 const renderLeftMenu = () => {
     const content = document.getElementById("content");
@@ -8,7 +9,15 @@ const renderLeftMenu = () => {
     const leftMenu = document.createElement("div");
     leftMenu.setAttribute("id", "leftMenu");
 
-    leftMenu.textContent = "Left Menu Placeholder";
+    const websiteTitleLogo = document.createElement("div");
+    websiteTitleLogo.classList.add("websiteTitleLogo");
+    websiteTitleLogo.textContent = "To-Do List";
+    leftMenu.appendChild(websiteTitleLogo);
+
+    const check = new Image();
+    check.src = checkMark;
+    check.classList.add("check");
+    leftMenu.appendChild(check); // may revisit this image src
 
     content.appendChild(leftMenu);
 

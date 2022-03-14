@@ -1,28 +1,55 @@
 body {
     margin: 0;
+    font-family: 'Fredoka', sans-serif;
 }
 
+button {
+    font-family: 'Fredoka', sans-serif;
+    background-color:red;
+    margin: 10px;
+    color: #ffff10;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.check {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    
+}
 #content {
     display: flex;
     height: 100%;
 }
 
 #leftMenu {
-    background-color: yellow;
-    width: 25%;
+    background-color: #ffff10;
+    width: 15%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #projectDisplay {
     background-color: grey;
-    width: 25%;
+    width: 15%;
     height: 100%;
 }
 
 #taskDisplay {
     background-color: red;
-    width: 50%;
+    width: 70%;
     height: 100%;
+}
+
+.taskHolder {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid black;
+}
+
+.websiteTitleLogo {
+    color: red;
+    font-size: 2rem;
 }

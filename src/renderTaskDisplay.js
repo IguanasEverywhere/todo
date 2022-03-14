@@ -16,9 +16,26 @@ const displayAddedTasks = (currentProject) => {
         taskDisplay.firstElementChild.remove();
      }
     currentProject.taskArray.forEach(task => {
-        let taskTitle = document.createElement("li");
+        let taskHolder = document.createElement("div");
+        taskHolder.classList.add("taskHolder");
+        taskDisplay.appendChild(taskHolder);
+
+        let taskTitle = document.createElement("p");
         taskTitle.textContent = task.title;
-        taskDisplay.appendChild(taskTitle);
+        taskHolder.appendChild(taskTitle);
+
+        let taskDescription = document.createElement("p");
+        taskDescription.textContent = task.description;
+        taskHolder.appendChild(taskDescription);
+
+        let taskDueDate = document.createElement("p");
+        taskDueDate.textContent = task.dueDate;
+        taskHolder.appendChild(taskDueDate);
+
+        let taskPriority = document.createElement("p");
+        taskPriority.textContent = task.priority;
+        taskHolder.appendChild(taskPriority);
+
     });
 }
 
