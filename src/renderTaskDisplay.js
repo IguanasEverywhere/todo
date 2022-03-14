@@ -9,4 +9,17 @@ const renderTaskDisplay = () => {
     content.appendChild(taskDisplay);
 }
 
-export { renderTaskDisplay };
+const displayAddedTasks = (currentProject) => {
+    const taskDisplay = document.getElementById("taskDisplay");
+
+    while(taskDisplay.firstElementChild) {
+        taskDisplay.firstElementChild.remove();
+     }
+    currentProject.taskArray.forEach(task => {
+        let taskTitle = document.createElement("li");
+        taskTitle.textContent = task.title;
+        taskDisplay.appendChild(taskTitle);
+    });
+}
+
+export { renderTaskDisplay, displayAddedTasks };
