@@ -57,6 +57,7 @@ body {
     align-items: center;
     font-size: 2rem;
     color:#f9f9f9;
+    text-shadow: 2px 2px grey;
 }
 
 #taskDisplay {
@@ -75,6 +76,7 @@ body {
     color: red;
     font-size: 2rem;
     font-weight: 600;
+    text-shadow: 2px 2px grey;
 }
 
 .addTaskBtn {
@@ -95,5 +97,6 @@ body {
 #taskHeading{
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
+    background-color: #ff0200;
+    color: #f9f9f9;
 }
