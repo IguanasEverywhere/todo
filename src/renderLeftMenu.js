@@ -22,12 +22,14 @@ const renderLeftMenu = () => {
     content.appendChild(leftMenu);
 
     const addProjectBtn = document.createElement("button");
+    addProjectBtn.classList.add("addProjectBtn");
     addProjectBtn.textContent = "Add Project To WorkSpace";
     leftMenu.appendChild(addProjectBtn);
     addProjectBtn.addEventListener("click",() => {
         let projectName = prompt("What is the project named?");
         pushToProjectArray(makeProject(projectName));
         let projectNameBtn = document.createElement("button");
+        projectNameBtn.classList.add("projectNameBtn");
         projectNameBtn.textContent = projectName;
         leftMenu.appendChild(projectNameBtn);
         projectNameBtn.addEventListener("click", () => {

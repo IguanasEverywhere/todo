@@ -12,10 +12,10 @@ const changeCurrentProject = (projectName) => {
     console.log(currentProject);
 
     const taskDisplay = document.getElementById("taskDisplay");
-    while(taskDisplay.firstElementChild) {
+    while (taskDisplay.firstElementChild) {
         taskDisplay.firstElementChild.remove();
-     }
-    
+    }
+
 
     displayAddedTasks(currentProject);
 

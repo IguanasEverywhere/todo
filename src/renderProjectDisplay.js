@@ -14,7 +14,8 @@ const renderProjectDisplay = () => {
 const addButtonToProjectDisplay = (currentProject) => {
     const projectDisplay = document.getElementById("projectDisplay");
     const addTaskBtn = document.createElement("button");
-    addTaskBtn.textContent = "Add Task For " + currentProject.projectName;
+    addTaskBtn.textContent = "+";
+    addTaskBtn.classList.add("addTaskBtn");
     projectDisplay.appendChild(addTaskBtn);
 
     // will complete with prompts for now, will make menu later

@@ -3,12 +3,21 @@ body {
     font-family: 'Fredoka', sans-serif;
 }
 
-button {
+.addProjectBtn {
     font-family: 'Fredoka', sans-serif;
     background-color:red;
-    margin: 10px;
+    margin: 20px;
     color: #ffff10;
     box-shadow: 5px 5px 10px gray;
+}
+
+.projectNameBtn {
+    background-color: #085bf1;
+    font-family: 'Fredoka', sans-serif;
+    color: #ffff10;
+    margin: 10px;
+    box-shadow: 5px 5px 10px gray;
+
 }
 
 .check {
@@ -32,13 +41,18 @@ button {
 }
 
 #projectDisplay {
-    background-color: grey;
+    background-color: #2d6ad5;
+    display: flex;
+    flex-direction: column;
     width: 15%;
     height: 100%;
+    align-items: center;
+    font-size: 2rem;
+    color:#f9f9f9;
 }
 
 #taskDisplay {
-    background-color: red;
+    background-color: #f9f9f9eb;
     width: 70%;
     height: 100%;
 }
@@ -52,4 +66,20 @@ button {
 .websiteTitleLogo {
     color: red;
     font-size: 2rem;
+    font-weight: 600;
+}
+
+.addTaskBtn {
+    background-color: #f9f9f9;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border-style: double;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.addTaskBtn:hover {
+    width: 65px;
+    height: 65px;
 }
