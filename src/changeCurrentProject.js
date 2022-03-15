@@ -1,5 +1,5 @@
 import { projectArray } from "./pushProjectToArray";
-import { addButtonToProjectDisplay } from "./renderProjectDisplay";
+import { addButtonToProjectDisplay } from "./addButtonToProjectDisplay";
 import { displayAddedTasks } from "./renderTaskDisplay";
 
 const changeCurrentProject = (projectName) => {

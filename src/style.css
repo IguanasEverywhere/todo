@@ -100,3 +100,9 @@ body {
     background-color: #ff0200;
     color: #f9f9f9;
 }
+
+.createTaskMenu {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+}
