@@ -4,17 +4,60 @@ const renderTaskDisplay = () => {
     const taskDisplay = document.createElement("div");
     taskDisplay.setAttribute("id", "taskDisplay");
 
-    taskDisplay.textContent = "Task Display Placeholder";
-
     content.appendChild(taskDisplay);
+
+    const taskHeading = document.createElement("div");
+    taskHeading.setAttribute("id","taskHeading");
+    taskDisplay.appendChild(taskHeading);
+
+
+    const titleHeading = document.createElement("p");
+    titleHeading.textContent = "Task Name";
+    taskHeading.appendChild(titleHeading);
+
+    const descriptionHeading = document.createElement("p");
+    descriptionHeading.textContent = "Description";
+    taskHeading.appendChild(descriptionHeading);
+
+    const dueDateHeading = document.createElement("p");
+    dueDateHeading.textContent = "Due";
+    taskHeading.appendChild(dueDateHeading);
+
+    const priorityHeading = document.createElement("p");
+    priorityHeading.textContent = "Priority";
+    taskHeading.appendChild(priorityHeading);
+
 }
 
 const displayAddedTasks = (currentProject) => {
     const taskDisplay = document.getElementById("taskDisplay");
 
-    while(taskDisplay.firstElementChild) {
+
+    while (taskDisplay.firstElementChild) {
         taskDisplay.firstElementChild.remove();
-     }
+    }
+
+    const taskHeading = document.createElement("div");
+    taskHeading.setAttribute("id","taskHeading");
+    taskDisplay.appendChild(taskHeading);
+
+
+    const titleHeading = document.createElement("p");
+    titleHeading.textContent = "Task Name";
+    taskHeading.appendChild(titleHeading);
+
+    const descriptionHeading = document.createElement("p");
+    descriptionHeading.textContent = "Description";
+    taskHeading.appendChild(descriptionHeading);
+
+    const dueDateHeading = document.createElement("p");
+    dueDateHeading.textContent = "Due";
+    taskHeading.appendChild(dueDateHeading);
+
+    const priorityHeading = document.createElement("p");
+    priorityHeading.textContent = "Priority";
+    taskHeading.appendChild(priorityHeading);
+
     currentProject.taskArray.forEach(task => {
         let taskHolder = document.createElement("div");
         taskHolder.classList.add("taskHolder");

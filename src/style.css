@@ -20,6 +20,14 @@ body {
 
 }
 
+.addProjectBtn:hover {
+    background-color: #ff0000a6;
+}
+
+.projectNameBtn:hover {
+    background-color: #085bf194;
+}
+
 .check {
     width: 50px;
     height: 50px;
@@ -82,4 +90,10 @@ body {
 .addTaskBtn:hover {
     width: 65px;
     height: 65px;
+}
+
+#taskHeading{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
 }
