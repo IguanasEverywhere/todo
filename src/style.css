@@ -102,7 +102,53 @@ body {
 }
 
 .createTaskMenu {
-    border: 2px solid red;
+    padding: 5px;
+    margin: 20px 0;
+    background-color: #8db4ed;
     display: flex;
     flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.dropDown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+    color: white;
+    font-size: 1rem;
+}
+
+
+.priorityButton {
+    font-family: 'Fredoka', sans-serif;
+    background-color:#00cb00;
+    color: white;
+}
+
+.priorityLevelButtons {
+    font-family: 'Fredoka', sans-serif;
+    background-color: #149314;
+    border: none;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 white;
+}
+
+.priorityLevelButtons:hover {
+    background-color: green;
+}
+
+.priorityDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.submitBtn {
+    background-color: #f9f9f9;
+}
+
+.submitBtn:hover {
+    background-color: blue;
 }

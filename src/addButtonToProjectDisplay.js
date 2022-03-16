@@ -12,8 +12,6 @@ const addButtonToProjectDisplay = (currentProject) => {
 
         addTaskBtn.setAttribute("disabled", true);
 
-        // addTaskBtn.style.visibility = "hidden";
-
         const createTaskMenu = document.createElement("div");
         createTaskMenu.classList.add("createTaskMenu");
         projectDisplay.appendChild(createTaskMenu);
@@ -30,13 +28,44 @@ const addButtonToProjectDisplay = (currentProject) => {
         dueDateInput.type="date";
         createTaskMenu.appendChild(dueDateInput);
 
-        let priorityInput = document.createElement("input");
-        priorityInput.setAttribute("placeholder", "Priority");
-        createTaskMenu.appendChild(priorityInput);
+        // add drop down menu for the priority input
+        let priorityDiv = document.createElement("div");
+        createTaskMenu.appendChild(priorityDiv);
+        priorityDiv.classList.add("priorityDiv");
+        let priorityInput = document.createElement("button");
+        priorityInput.textContent = "Select Priority ↓";
+        priorityInput.classList.add("priorityButton");
+        priorityDiv.appendChild(priorityInput);
+        let highPriority = document.createElement("button");
+        highPriority.textContent = "High";
+        highPriority.classList.add("priorityLevelButtons");
+        let lowPriority = document.createElement("button");
+        lowPriority.textContent = "Low";
+        lowPriority.classList.add("priorityLevelButtons");
+        let dropDown = document.createElement("div");
+        dropDown.classList.add("dropDown");
+        priorityDiv.appendChild(dropDown);
+        dropDown.style.visibility = "hidden";
+        priorityInput.addEventListener("click", () => {
+            dropDown.style.visibility = "visible";
+        });
+        dropDown.appendChild(highPriority);
+        dropDown.appendChild(lowPriority);
+        highPriority.addEventListener("click", () => {
+            priorityInput.value = "High";
+            priorityInput.textContent = "High Priority";
+            dropDown.style.visibility="hidden";
+        });
+        lowPriority.addEventListener("click", () => {
+            priorityInput.value = "Low";
+            priorityInput.textContent = "Low Priority";
+            dropDown.style.visibility="hidden";
+        });
 
 
         let submitBtn = document.createElement("button");
         submitBtn.textContent = "Create Task";
+        submitBtn.classList.add("submitBtn");
         createTaskMenu.appendChild(submitBtn);
 
         submitBtn.addEventListener("click", () => {
