@@ -2,6 +2,7 @@ import { makeProject } from "./makeProject";
 import { changeCurrentProject } from "./changeCurrentProject";
 import { pushToProjectArray } from "./pushProjectToArray";
 import checkMark from "./greenCheck.png";
+import { renderAllTasks } from "./renderAllTasks";
 
 const renderLeftMenu = () => {
     const content = document.getElementById("content");
@@ -35,6 +36,14 @@ const renderLeftMenu = () => {
         projectNameBtn.addEventListener("click", () => {
             changeCurrentProject(projectName);
         });
+    });
+
+    const allProjectsBtn = document.createElement("button");
+    allProjectsBtn.textContent = "View All Tasks From All Projects";
+    allProjectsBtn.classList.add("allProjectsBtn");
+    leftMenu.appendChild(allProjectsBtn);
+    allProjectsBtn.addEventListener("click", () => {
+        renderAllTasks();
     });
 }
 
