@@ -3,8 +3,10 @@ import { displayAddedTasks, renderTaskDisplay } from "./renderTaskDisplay";
 import { renderTaskHeading } from "./renderTaskHeading";
 
 const renderAllTasks = () => {
-
-    // this has a lot of repeated code from renderTaskDisplay. Let's try to refactor
+    
+    const projectDisplay = document.getElementById("projectDisplay");
+    projectDisplay.textContent = "All Tasks";
+    // this has a lot of repeated code from renderTaskDisplay. Let's try to refactor?
 
     const taskDisplay = document.getElementById("taskDisplay");
 

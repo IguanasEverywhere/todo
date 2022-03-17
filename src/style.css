@@ -58,18 +58,21 @@ body {
     font-size: 2rem;
     color:#f9f9f9;
     text-shadow: 2px 2px grey;
+    text-align: center;
 }
 
 #taskDisplay {
     background-color: #f9f9f9eb;
     width: 70%;
     height: 100%;
+    position: relative;
 }
 
 .taskHolder {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     border: 3px solid black;
+    position: relative;
 }
 
 .websiteTitleLogo {
@@ -96,7 +99,7 @@ body {
 
 #taskHeading{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #ff0200;
     color: #f9f9f9;
 }
@@ -151,4 +154,38 @@ body {
 
 .submitBtn:hover {
     background-color:#00d000;
+}
+
+.taskPopUp {
+    border: 2px solid black;
+    background-color: #fdff00;
+    width: 75%;
+    height: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    left: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+
+    animation-name: taskPopUp;
+    animation-duration: 1s;
+}
+
+.taskPopUpCloseBtn {
+    position: absolute;
+    top: 2%;
+    right: 96%;
+    border-radius: 100%;
+    border: 1px solid black;
+    background-color: #ff0000;
+    color: #f9f9f9;
+}
+
+@keyframes taskPopUp {
+    from {top: 0;}
+    to {top: 150px;}
 }

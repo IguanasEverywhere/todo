@@ -1,4 +1,5 @@
 import { renderTaskHeading } from "./renderTaskHeading";
+import { renderTaskDetailsPopUp } from "./renderTaskDetailsPopUp";
 
 const renderTaskDisplay = () => {
     const content = document.getElementById("content");
@@ -25,22 +26,17 @@ const displayAddedTasks = (currentProject) => {
         let taskHolder = document.createElement("div");
         taskHolder.classList.add("taskHolder");
         taskDisplay.appendChild(taskHolder);
+        taskHolder.addEventListener("click", () => {
+            renderTaskDetailsPopUp(task.title, task.description, task.dueDate, task.priority);
+        });
 
         let taskTitle = document.createElement("p");
         taskTitle.textContent = task.title;
         taskHolder.appendChild(taskTitle);
 
-        let taskDescription = document.createElement("p");
-        taskDescription.textContent = task.description;
-        taskHolder.appendChild(taskDescription);
-
         let taskDueDate = document.createElement("p");
         taskDueDate.textContent = task.dueDate;
         taskHolder.appendChild(taskDueDate);
-
-        let taskPriority = document.createElement("p");
-        taskPriority.textContent = task.priority;
-        taskHolder.appendChild(taskPriority);
 
     });
 }
