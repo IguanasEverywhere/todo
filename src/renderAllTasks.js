@@ -27,17 +27,11 @@ const renderAllTasks = () => {
             taskTitle.textContent = task.title;
             taskHolder.appendChild(taskTitle);
     
-            let taskDescription = document.createElement("p");
-            taskDescription.textContent = task.description;
-            taskHolder.appendChild(taskDescription);
-    
             let taskDueDate = document.createElement("p");
             taskDueDate.textContent = task.dueDate;
             taskHolder.appendChild(taskDueDate);
     
-            let taskPriority = document.createElement("p");
-            taskPriority.textContent = task.priority;
-            taskHolder.appendChild(taskPriority);
+    
     
         });
     });

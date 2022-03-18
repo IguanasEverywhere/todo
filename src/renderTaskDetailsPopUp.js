@@ -1,3 +1,5 @@
+import { deleteProject } from "./deleteProject";
+
 const renderTaskDetailsPopUp = (title, description, dueDate, priority) => {
 
     const taskDisplay = document.getElementById("taskDisplay");
@@ -31,8 +33,18 @@ const renderTaskDetailsPopUp = (title, description, dueDate, priority) => {
         taskPopUp.remove();
     });
 
+    let deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("deleteBtn");
+    deleteBtn.textContent = "Delete This Task";
+    taskPopUp.appendChild(deleteBtn);
     taskDisplay.appendChild(taskPopUp);
-   
+
+    let currentProjectText = document.getElementById("projectDisplay");
+    deleteBtn.addEventListener("click", () => {
+        let currentProject = currentProjectText.textContent.slice(0,currentProjectText.textContent.length-1); // to get rid of + sign from textContent
+        deleteProject(currentProject, title);
+    });
+    
 }
 
 export { renderTaskDetailsPopUp };
