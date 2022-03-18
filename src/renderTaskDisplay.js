@@ -39,6 +39,11 @@ const displayAddedTasks = (currentProject) => {
         taskHolder.appendChild(taskDueDate);
 
     });
+
+    const projectTasksMsg = document.createElement("p");
+    projectTasksMsg.classList.add("projectTasksMsg");
+    projectTasksMsg.textContent = "Click a task to view more details";
+    taskDisplay.appendChild(projectTasksMsg);
 }
 
 export { renderTaskDisplay, displayAddedTasks };

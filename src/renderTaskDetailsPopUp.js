@@ -1,4 +1,4 @@
-import { deleteProject } from "./deleteProject";
+import { deleteTask } from "./deleteTask.js";
 
 const renderTaskDetailsPopUp = (title, description, dueDate, priority) => {
 
@@ -42,7 +42,8 @@ const renderTaskDetailsPopUp = (title, description, dueDate, priority) => {
     let currentProjectText = document.getElementById("projectDisplay");
     deleteBtn.addEventListener("click", () => {
         let currentProject = currentProjectText.textContent.slice(0,currentProjectText.textContent.length-1); // to get rid of + sign from textContent
-        deleteProject(currentProject, title);
+        console.log("FROM CURRENT PROJECTEXT:" + currentProject);
+        deleteTask(currentProject, title);
     });
     
 }

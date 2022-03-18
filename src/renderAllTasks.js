@@ -1,6 +1,8 @@
 import { projectArray } from "./pushProjectToArray";
 import { displayAddedTasks, renderTaskDisplay } from "./renderTaskDisplay";
 import { renderTaskHeading } from "./renderTaskHeading";
+import { renderTaskDetailsPopUp } from "./renderTaskDetailsPopUp";
+import { changeCurrentProject } from "./changeCurrentProject";
 
 const renderAllTasks = () => {
     
@@ -31,10 +33,15 @@ const renderAllTasks = () => {
             taskDueDate.textContent = task.dueDate;
             taskHolder.appendChild(taskDueDate);
     
-    
-    
+            taskHolder.addEventListener("click", () => {
+                changeCurrentProject(currentProject.projectName);
+            });
         });
     });
+    const allTasksMsg = document.createElement("p");
+    allTasksMsg.classList.add("allTasksMsg");
+    allTasksMsg.textContent = "Click a task to be taken to its project listing";
+    taskDisplay.appendChild(allTasksMsg);
 
 }
 

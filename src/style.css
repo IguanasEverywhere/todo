@@ -71,8 +71,16 @@ body {
 .taskHolder {
     display: flex;
     justify-content: space-around;
-    border: 3px solid black;
+    border: 1px solid black;
     position: relative;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+.taskHolder:hover {
+    background-color: grey;
+    color:#f9f9f9eb;
 }
 
 .websiteTitleLogo {
@@ -188,4 +196,23 @@ body {
 @keyframes taskPopUp {
     from {top: 0;}
     to {top: 150px;}
+}
+
+.allTasksMsg, .projectTasksMsg {
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.deleteBtn {
+    border-style: none;
+    background-color: #00c400;
+    color: #f9f9f9;
+    padding: 5px;
+    margin: 10px;
+}
+
+.deleteBtn:hover {
+    background-color: #149314;
 }

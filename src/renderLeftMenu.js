@@ -45,6 +45,11 @@ const renderLeftMenu = () => {
     allProjectsBtn.addEventListener("click", () => {
         renderAllTasks();
     });
+
+    const deleteProjectBtn = document.createElement("button");
+    deleteProjectBtn.textContent = "Delete A Project From Workspace";
+    deleteProjectBtn.classList.add("allProjectsBtn");
+    leftMenu.appendChild(deleteProjectBtn);
 }
 
 

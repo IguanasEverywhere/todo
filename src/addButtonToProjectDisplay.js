@@ -74,6 +74,7 @@ const addButtonToProjectDisplay = (currentProject) => {
             createTaskMenu.remove();
         });
     });
+
 }
 
 export { addButtonToProjectDisplay };
