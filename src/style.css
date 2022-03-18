@@ -216,3 +216,12 @@ body {
 .deleteBtn:hover {
     background-color: #149314;
 }
+
+#projectBtnHolder {
+    display: flex;
+    flex-direction: column;
+}
+
+#deleteMenu {
+    border: 3px solid blue;
+}

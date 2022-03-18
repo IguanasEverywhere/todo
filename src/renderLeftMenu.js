@@ -1,8 +1,8 @@
-import { makeProject } from "./makeProject";
-import { changeCurrentProject } from "./changeCurrentProject";
-import { pushToProjectArray } from "./pushProjectToArray";
 import checkMark from "./greenCheck.png";
 import { renderAllTasks } from "./renderAllTasks";
+import { deleteProject } from "./deleteProject";
+import { renderProjectButtons } from "./renderProjectButtons";
+
 
 const renderLeftMenu = () => {
     const content = document.getElementById("content");
@@ -27,15 +27,10 @@ const renderLeftMenu = () => {
     addProjectBtn.textContent = "Add Project To WorkSpace";
     leftMenu.appendChild(addProjectBtn);
     addProjectBtn.addEventListener("click",() => {
-        let projectName = prompt("What is the project named?");
-        pushToProjectArray(makeProject(projectName));
-        let projectNameBtn = document.createElement("button");
-        projectNameBtn.classList.add("projectNameBtn");
-        projectNameBtn.textContent = projectName;
-        leftMenu.appendChild(projectNameBtn);
-        projectNameBtn.addEventListener("click", () => {
-            changeCurrentProject(projectName);
-        });
+        while (projectBtnHolder.firstChild) {
+            projectBtnHolder.removeChild(projectBtnHolder.firstChild);
+        }
+        renderProjectButtons();
     });
 
     const allProjectsBtn = document.createElement("button");
@@ -50,6 +45,15 @@ const renderLeftMenu = () => {
     deleteProjectBtn.textContent = "Delete A Project From Workspace";
     deleteProjectBtn.classList.add("allProjectsBtn");
     leftMenu.appendChild(deleteProjectBtn);
+
+    deleteProjectBtn.addEventListener("click", () => {
+        deleteProject();
+        
+    });
+
+    let projectBtnHolder = document.createElement("div");
+    projectBtnHolder.setAttribute("id", "projectBtnHolder");
+    leftMenu.appendChild(projectBtnHolder);
 }
 
 
