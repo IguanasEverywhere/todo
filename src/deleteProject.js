@@ -8,12 +8,16 @@ const deleteProject = (projectName) => {
     let leftMenu = document.getElementById("leftMenu");
     const deleteMenu = document.createElement("div");
     deleteMenu.setAttribute("id", "deleteMenu");
-    deleteMenu.style.display = "flex";
+
+    const deleteMessage = document.createElement("h5");
+    deleteMessage.textContent = "Which Projects Would You Like to Delete?";
+    deleteMenu.appendChild(deleteMessage);
 
     const projectButtons = document.getElementsByClassName("projectNameBtn");
     let projectButtonsArray = Array.from(projectButtons);
     projectButtonsArray.forEach(btn => {
         let btnForDelete = document.createElement("button");
+        btnForDelete.classList.add("projectNameBtn");
         btnForDelete.textContent = btn.textContent;
         deleteMenu.appendChild(btnForDelete);
 
@@ -26,6 +30,10 @@ const deleteProject = (projectName) => {
 
             while (projectBtnHolder.firstChild) {
                 projectBtnHolder.removeChild(projectBtnHolder.firstChild);
+            }
+
+            while (deleteMenu.firstChild) {
+                deleteMenu.removeChild(deleteMenu.firstChild);
             }
 
             projectArray.forEach(project => {
