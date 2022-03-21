@@ -20,7 +20,8 @@ const addButtonToProjectDisplay = (currentProject) => {
         titleInput.setAttribute("placeholder", "Task Name");
         createTaskMenu.appendChild(titleInput);
 
-        let descriptionInput = document.createElement("input");
+        let descriptionInput = document.createElement("textarea");
+        descriptionInput.setAttribute("rows", "5");
         descriptionInput.setAttribute("placeholder", "Task Description");
         createTaskMenu.appendChild(descriptionInput);
 
