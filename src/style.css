@@ -113,8 +113,9 @@ body {
 }
 
 .createTaskMenu {
-    padding: 5px;
     margin: 20px 0;
+    width: 90%;
+    padding: 5px;
     background-color: #8db4ed;
     display: flex;
     flex-direction: column;
@@ -244,4 +245,8 @@ body {
 
 .editInputs {
     width: 33%;
+}
+
+.priorityEdit {
+    background-color: red;
 }

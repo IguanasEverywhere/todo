@@ -22,7 +22,7 @@ const renderTaskDetailsPopUp = (title, description, dueDate, priority) => {
     taskPopUp.appendChild(taskDueDate);
 
     let taskPriority = document.createElement("h4");
-    taskPriority.textContent = priority + " Priority";
+    taskPriority.textContent = priority;
     taskPopUp.appendChild(taskPriority);
 
     let closeBtn = document.createElement("button");

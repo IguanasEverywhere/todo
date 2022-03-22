@@ -53,12 +53,12 @@ const addButtonToProjectDisplay = (currentProject) => {
         dropDown.appendChild(highPriority);
         dropDown.appendChild(lowPriority);
         highPriority.addEventListener("click", () => {
-            priorityInput.value = "High";
+            priorityInput.value = "High Priority";
             priorityInput.textContent = "High Priority";
             dropDown.style.visibility="hidden";
         });
         lowPriority.addEventListener("click", () => {
-            priorityInput.value = "Low";
+            priorityInput.value = "Low Priority";
             priorityInput.textContent = "Low Priority";
             dropDown.style.visibility="hidden";
         });

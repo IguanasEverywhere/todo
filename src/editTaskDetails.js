@@ -2,6 +2,7 @@ import { projectArray } from "./pushProjectToArray";
 import { displayAddedTasks } from "./renderTaskDisplay";
 
 const editTaskDetails = (titleContent, descriptionContent, dueDateContent, priorityContent, currentProject, title) => {
+
     const taskPopUp = document.getElementsByClassName("taskPopUp")[0];
     while (taskPopUp.firstChild) {
         taskPopUp.removeChild(taskPopUp.firstChild);
@@ -18,21 +19,36 @@ const editTaskDetails = (titleContent, descriptionContent, dueDateContent, prior
 
     let descriptionEdit = document.createElement("textarea");
     descriptionEdit.setAttribute("rows", "5");
-    // descriptionEdit.setAttribute("value", descriptionContent);
     descriptionEdit.value = descriptionContent;
     descriptionEdit.classList.add("editInputs");
     taskPopUp.appendChild(descriptionEdit);
-  
+
 
     let dueDateEdit = document.createElement("input");
     dueDateEdit.setAttribute("type", "date");
     dueDateEdit.classList.add("editInputs");
     taskPopUp.appendChild(dueDateEdit);
 
-    let priorityEdit = document.createElement("input");
+ 
+    let priorityEdit = document.createElement("button");
+    if (priorityContent === "High Priority") {
+        priorityEdit.setAttribute("style", "background-color: #00cb00");
+    } else {
+        priorityEdit.setAttribute("style", "background-color: #149314");
+    }
+    priorityEdit.textContent = priorityContent;
     taskPopUp.appendChild(priorityEdit);
-    priorityEdit.classList.add("editInputs");
-    priorityEdit.setAttribute("value", priorityContent);
+    priorityEdit.addEventListener("click", () => {
+        if (priorityContent === "High Priority"){
+            priorityEdit.textContent = "Low Priority";
+            priorityEdit.setAttribute("style", "background-color: #149314");
+            priorityContent = "Low Priority";
+        } else if (priorityContent === "Low Priority") {
+            priorityEdit.textContent = "High Priority";
+            priorityEdit.setAttribute("style", "background-color: #00cb00");
+            priorityContent = "High Priority";
+        }
+    });
 
     let finishEditBtn = document.createElement("button");
     finishEditBtn.classList.add("editBtn");
@@ -41,7 +57,6 @@ const editTaskDetails = (titleContent, descriptionContent, dueDateContent, prior
 
 
     finishEditBtn.addEventListener("click", () => {
-
         console.log(currentProject);
         let currentProjectToEdit = projectArray.find(project => project.projectName === currentProject);
 
@@ -50,7 +65,7 @@ const editTaskDetails = (titleContent, descriptionContent, dueDateContent, prior
         currentTask.title = titleEdit.value;
         currentTask.description = descriptionEdit.value;
         currentTask.dueDate = dueDateEdit.value;
-        currentTask.priority = priorityEdit.value;
+        currentTask.priority = priorityContent;
 
         console.log(currentProjectToEdit); //for debugging
 

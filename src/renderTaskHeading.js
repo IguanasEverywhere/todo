@@ -10,17 +10,10 @@ const renderTaskHeading = () => {
     titleHeading.textContent = "Task Name";
     taskHeading.appendChild(titleHeading);
 
-    // const descriptionHeading = document.createElement("p");
-    // descriptionHeading.textContent = "Description";
-    // taskHeading.appendChild(descriptionHeading);
-
     const dueDateHeading = document.createElement("p");
     dueDateHeading.textContent = "Due Date";
     taskHeading.appendChild(dueDateHeading);
 
-    // const priorityHeading = document.createElement("p");
-    // priorityHeading.textContent = "Priority";
-    // taskHeading.appendChild(priorityHeading);
 }
 
 export { renderTaskHeading };
