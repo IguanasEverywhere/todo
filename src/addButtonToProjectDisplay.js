@@ -71,7 +71,7 @@ const addButtonToProjectDisplay = (currentProject) => {
         createTaskMenu.appendChild(submitBtn);
 
         submitBtn.addEventListener("click", () => {
-            pushTaskToProject(makeTask(titleInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value, currentProject), currentProject);
+            pushTaskToProject(makeTask(titleInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value), currentProject);
             addTaskBtn.removeAttribute("disabled");
             createTaskMenu.remove();
         });

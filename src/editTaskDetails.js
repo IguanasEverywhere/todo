@@ -1,5 +1,6 @@
 import { projectArray } from "./pushProjectToArray";
 import { displayAddedTasks } from "./renderTaskDisplay";
+import { saveProjects } from "./saveProjects";
 
 const editTaskDetails = (titleContent, descriptionContent, dueDateContent, priorityContent, currentProject, title) => {
 
@@ -70,6 +71,7 @@ const editTaskDetails = (titleContent, descriptionContent, dueDateContent, prior
         console.log(currentProjectToEdit); //for debugging
 
 
+        saveProjects();
         displayAddedTasks(currentProjectToEdit);
 
     });

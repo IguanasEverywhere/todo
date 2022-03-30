@@ -2,6 +2,8 @@ import { makeProject } from "./makeProject";
 import { pushToProjectArray } from "./pushProjectToArray";
 import { projectArray } from "./pushProjectToArray";
 import { changeCurrentProject } from "./changeCurrentProject";
+import { displayAddedTasks, renderTaskDisplay } from "./renderTaskDisplay";
+import { pushTaskToProject } from "./pushTaskToProject";
 
 
 const loadProjects = () => {
@@ -9,7 +11,7 @@ const loadProjects = () => {
     let parsedProjects = JSON.parse(localStorage.getItem("projectNamesArray"));
     if (parsedProjects) {
         parsedProjects.forEach(project => {
-            pushToProjectArray(makeProject(project.projectName));
+            pushToProjectArray(project);            
         });
 
 
