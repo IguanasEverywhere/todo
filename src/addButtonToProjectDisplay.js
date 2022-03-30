@@ -18,12 +18,14 @@ const addButtonToProjectDisplay = (currentProject) => {
         projectDisplay.appendChild(createTaskMenu);
 
         let titleInput = document.createElement("input");
-        titleInput.setAttribute("placeholder", "Task Name");
+        titleInput.setAttribute("placeholder", "Task Name (max 40 chars)");
+        titleInput.setAttribute("maxlength", "40");
         createTaskMenu.appendChild(titleInput);
 
         let descriptionInput = document.createElement("textarea");
         descriptionInput.setAttribute("rows", "5");
         descriptionInput.setAttribute("placeholder", "Task Description");
+        descriptionInput.setAttribute("maxlength", "500");
         createTaskMenu.appendChild(descriptionInput);
 
         let dueDateInput = document.createElement("input");
