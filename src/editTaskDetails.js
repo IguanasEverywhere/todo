@@ -74,7 +74,6 @@ const editTaskDetails = (titleContent, descriptionContent, dueDateContent, prior
 
     });
 
-
 }
 
 export { editTaskDetails };

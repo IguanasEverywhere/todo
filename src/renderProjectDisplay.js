@@ -1,4 +1,3 @@
-
 const renderProjectDisplay = () => {
     const content = document.getElementById("content");
 

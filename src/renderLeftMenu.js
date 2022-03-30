@@ -2,7 +2,7 @@ import checkMark from "./greenCheck.png";
 import { renderAllTasks } from "./renderAllTasks";
 import { deleteProject } from "./deleteProject";
 import { renderProjectButtons } from "./renderProjectButtons";
-
+import { saveProjects } from "./saveProjects";
 
 const renderLeftMenu = () => {
     const content = document.getElementById("content");
@@ -26,11 +26,12 @@ const renderLeftMenu = () => {
     addProjectBtn.classList.add("addProjectBtn");
     addProjectBtn.textContent = "Add Project To WorkSpace";
     leftMenu.appendChild(addProjectBtn);
-    addProjectBtn.addEventListener("click",() => {
+    addProjectBtn.addEventListener("click", () => {
         while (projectBtnHolder.firstChild) {
             projectBtnHolder.removeChild(projectBtnHolder.firstChild);
         }
         renderProjectButtons();
+        saveProjects();
     });
 
     const allProjectsBtn = document.createElement("button");
@@ -48,8 +49,9 @@ const renderLeftMenu = () => {
 
     deleteProjectBtn.addEventListener("click", () => {
         deleteProject();
-        
+
     });
+
 
     let projectBtnHolder = document.createElement("div");
     projectBtnHolder.setAttribute("id", "projectBtnHolder");

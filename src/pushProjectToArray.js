@@ -1,4 +1,3 @@
-
 let projectArray = [];
 
 const pushToProjectArray = (newProject) => {
@@ -6,4 +5,4 @@ const pushToProjectArray = (newProject) => {
     console.log(projectArray);
 }
 
-export { pushToProjectArray, projectArray };
+export { pushToProjectArray, projectArray};

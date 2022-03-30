@@ -1,6 +1,7 @@
 import { projectArray } from "./pushProjectToArray";
 import { changeCurrentProject } from "./changeCurrentProject";
 import { renderAllTasks } from "./renderAllTasks";
+import { saveProjects } from "./saveProjects";
 
 
 const deleteProject = (projectName) => {
@@ -45,6 +46,7 @@ const deleteProject = (projectName) => {
                     changeCurrentProject(project.projectName);
                 });
             });
+            saveProjects();
             renderAllTasks();
         });
     });

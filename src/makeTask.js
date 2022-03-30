@@ -1,5 +1,5 @@
-const makeTask = (title, description, dueDate, priority) => {
-    return { title, description, dueDate, priority };
+const makeTask = (title, description, dueDate, priority, currentProject) => {
+    return { title, description, dueDate, priority, currentProject };
 }
 
 export { makeTask };

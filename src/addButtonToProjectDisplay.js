@@ -1,6 +1,7 @@
 import { pushTaskToProject } from "./pushTaskToProject";
 import { makeTask } from "./makeTask";
 
+
 const addButtonToProjectDisplay = (currentProject) => {
     const projectDisplay = document.getElementById("projectDisplay");
     const addTaskBtn = document.createElement("button");
@@ -70,7 +71,7 @@ const addButtonToProjectDisplay = (currentProject) => {
         createTaskMenu.appendChild(submitBtn);
 
         submitBtn.addEventListener("click", () => {
-            pushTaskToProject(makeTask(titleInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value), currentProject);
+            pushTaskToProject(makeTask(titleInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value, currentProject), currentProject);
             addTaskBtn.removeAttribute("disabled");
             createTaskMenu.remove();
         });

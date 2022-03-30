@@ -1,14 +1,12 @@
 import { projectArray } from "./pushProjectToArray";
-import { displayAddedTasks, renderTaskDisplay } from "./renderTaskDisplay";
 import { renderTaskHeading } from "./renderTaskHeading";
-import { renderTaskDetailsPopUp } from "./renderTaskDetailsPopUp";
 import { changeCurrentProject } from "./changeCurrentProject";
 
 const renderAllTasks = () => {
     
     const projectDisplay = document.getElementById("projectDisplay");
     projectDisplay.textContent = "All Tasks";
-    // this has a lot of repeated code from renderTaskDisplay. Let's try to refactor?
+    // this has a lot of repeated code from renderTaskDisplay. Should I refactor?
 
     const taskDisplay = document.getElementById("taskDisplay");
 

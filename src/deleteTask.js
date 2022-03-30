@@ -1,4 +1,3 @@
-
 import { projectArray } from "./pushProjectToArray";
 import { displayAddedTasks } from "./renderTaskDisplay";
 
